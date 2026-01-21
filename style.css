@@ -32,6 +32,71 @@ body {
     padding: 2rem 1rem;
     overflow-x: hidden;
     position: relative;
+    transition: background 0.5s ease;
+}
+
+/* Language Toggle Button */
+.lang-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    padding: 10px 18px;
+    background: white;
+    border: 1px solid rgba(8, 145, 178, 0.1);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    color: var(--accent-color);
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+}
+
+.lang-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(8, 145, 178, 0.15);
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+}
+
+/* LTR Specific Adjustments */
+[dir="ltr"] .section-title {
+    border-right: none;
+    border-left: 5px solid var(--accent-color);
+    padding-right: 0;
+    padding-left: 0.85rem;
+}
+
+[dir="ltr"] .lang-toggle {
+    left: auto;
+    right: 20px;
+}
+
+[dir="ltr"] body::before {
+    right: auto;
+    left: -10%;
+}
+
+[dir="ltr"] .phone-sub {
+    flex-direction: row-reverse;
+}
+
+[dir="ltr"] .phone-menu {
+    transform-origin: bottom right;
+}
+
+[dir="ltr"] .floating-contact-container {
+    left: auto;
+    right: 25px;
+    align-items: flex-end;
+    direction: rtl;
+    /* Flip inner for icons to be right of text in English? No, usually icons stay left. 
+    Actually, let's keep consistency. */
 }
 
 body::before {
@@ -174,7 +239,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Social Media Specific Styles */
 /* Social Media Specific Styles */
 .social-fb {
     background: #1877F2;
@@ -417,6 +481,9 @@ footer {
     padding: 0.5rem;
     background: #f8fafc;
     border-radius: 12px;
+}
+.ios-helper.show{
+    display:block;
 }
 
 /* Toast Notification */

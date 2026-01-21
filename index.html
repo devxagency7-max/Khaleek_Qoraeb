@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خليك قريب - كل روابط التواصل</title>
+    <title>خليك قريب</title>
 
     <!-- Favicon / Logo in Title -->
     <link rel="icon" type="image/png" href="logo_icon.png">
@@ -16,9 +16,10 @@
 
     <!-- Open Graph / Social Share -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="خليك قريب - كل روابط التواصل">
+    <meta property="og:title" content="خليك قريب">
     <meta property="og:description" content="كل روابط التواصل الرسمية في مكان واحد. امسح الـ QR للتواصل بسرعة.">
-    <meta property="og:image" content="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <meta property="og:image" content="logo.jpg">
+    <meta property="og:site_name" content="خليك قريب">
 
     <!-- Google Fonts: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,13 +39,13 @@
         <!-- Header -->
         <header>
             <img src="logo.jpg" alt="خليك قريب" class="logo-img">
-            <h1 class="logo-text">خليك قريب</h1>
-            <p class="subtitle">كل روابط التواصل الرسمية</p>
+            <h1 class="logo-text" data-i18n="logo-text">خليك قريب</h1>
+            <p class="subtitle" data-i18n="subtitle">بتدور علي سكن في بني سويف؟</p>
         </header>
 
         <!-- Section: App Download -->
         <section class="links-section">
-            <h2 class="section-title">تحميل التطبيق</h2>
+            <h2 class="section-title" data-i18n="download-title">تحميل التطبيق</h2>
 
             <a href="#" target="_blank" class="link-item store-link">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png"
@@ -58,7 +59,7 @@
 
             <div class="info-note">
                 <i class="fa-solid fa-circle-info"></i>
-                التواصل عبر الدردشة متاح فقط داخل التطبيق
+                <span data-i18n="chat-note">التواصل عبر الدردشة متاح فقط داخل التطبيق</span>
             </div>
         </section>
 
@@ -66,7 +67,7 @@
 
         <!-- Section 2: Social Links -->
         <section class="links-section">
-            <h2 class="section-title">روابط التواصل</h2>
+            <h2 class="section-title" data-i18n="social-title">روابط التواصل</h2>
 
             <a href="https://www.facebook.com/share/1GVFcAfBqX/?mibextid=wwXIfr" target="_blank"
                 class="link-item social-fb">
@@ -89,13 +90,13 @@
 
         <!-- Section: Save Contact -->
         <section class="links-section">
-            <h2 class="section-title">حفظ جهة الاتصال</h2>
+            <h2 class="section-title" data-i18n="save-title">حفظ جهة الاتصال</h2>
             <button onclick="saveContact()" class="link-item contact-btn"
                 style="grid-column: span 2; width: 100%; border: none; cursor: pointer;">
                 <i class="fa-solid fa-address-book"></i>
-                حفظ جهة الاتصال على الهاتف
+                <span data-i18n="save-btn">حفظ جهة الاتصال على الهاتف</span>
             </button>
-            <p id="ios-helper" class="ios-helper">بعد التحميل، افتح الملف لإضافة جهة الاتصال</p>
+            <p id="ios-helper" class="ios-helper" data-i18n="ios-helper">بعد التحميل، افتح الملف لإضافة جهة الاتصال</p>
         </section>
 
         <!-- Footer -->

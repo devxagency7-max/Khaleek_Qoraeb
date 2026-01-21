@@ -77,15 +77,65 @@ if (isIOS) {
     }
 }
 
-// iOS Safari Helper Detection (original logic, kept for Safari specific check if needed)
-document.addEventListener('DOMContentLoaded', () => {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-    // This block is now redundant if the above `isIOS` check is sufficient,
-    // but keeping it as per the instruction's structure which seemed to retain parts of it.
-    // If the intent was to replace, this would be removed.
-    if (isIOS && isSafari) {
-        const helper = document.getElementById('ios-helper');
-        if (helper) helper.style.display = 'block';
+// --- Multi-Language Support ---
+const translations = {
+    ar: {
+        "logo-text": "خليك قريب",
+        "subtitle": "كل روابط التواصل الرسمية",
+        "download-title": "تحميل التطبيق",
+        "chat-note": "التواصل عبر الدردشة متاح فقط داخل التطبيق",
+        "social-title": "روابط التواصل",
+        "fb-text": "فيسبوك - Facebook",
+        "ig-text": "إنستجرام - Instagram",
+        "tk-text": "تيك توك - TikTok",
+        "save-title": "حفظ جهة الاتصال",
+        "save-btn": "حفظ جهة الاتصال على الهاتف",
+        "ios-helper": "بعد التحميل، افتح الملف لإضافة جهة الاتصال",
+        "toast-success": "✅ تم تحميل جهة الاتصال",
+        "lang-btn": "English"
+    },
+    en: {
+        "logo-text": "Stay Close",
+        "subtitle": "All official contact links",
+        "download-title": "Download the App",
+        "chat-note": "Direct chat is only available inside the app",
+        "social-title": "Connect with Us",
+        "fb-text": "Facebook",
+        "ig-text": "Instagram",
+        "tk-text": "TikTok",
+        "save-title": "Save Contact",
+        "save-btn": "Save Contact to Phone",
+        "ios-helper": "After downloading, open the file to add the contact",
+        "toast-success": "✅ Contact downloaded successfully",
+        "lang-btn": "العربية"
     }
-});
+};
+
+let currentLang = localStorage.getItem('siteLang') || 'ar';
+
+function updateUI() {
+    const texts = translations[currentLang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (texts[key]) {
+            el.textContent = texts[key];
+        }
+    });
+
+    // Update Language Toggle Button
+    const btnText = document.querySelector('.lang-text');
+    if (btnText) btnText.textContent = texts['lang-btn'];
+
+    // Update Direction and Lang attribute
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+}
+
+function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    localStorage.setItem('siteLang', currentLang);
+    updateUI();
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', updateUI);
