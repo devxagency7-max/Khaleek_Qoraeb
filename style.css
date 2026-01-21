@@ -211,7 +211,7 @@ header {
 
 .store-link {
     height: 70px;
-    width: 100%;
+    width: 250px;
     /* Slightly adjusted height */
     padding: 0 !important;
     /* Remove padding to let image fill space */
