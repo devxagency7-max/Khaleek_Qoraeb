@@ -206,7 +206,7 @@ header {
 
 .social-tk:hover i {
     color: white !important;
-    text-shadow: 2px 2px #EE1D52, -2px -2px #69C9D0;
+    text-shadow: 1px 0px #EE1D52, -1px 0px #69C9D0;
 }
 
 .store-link {
@@ -338,8 +338,8 @@ footer {
 }
 
 .powered-logo {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     background: white;
