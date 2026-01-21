@@ -94,9 +94,14 @@ body {
     left: auto;
     right: 25px;
     align-items: flex-end;
-    direction: rtl;
-    /* Flip inner for icons to be right of text in English? No, usually icons stay left. 
-    Actually, let's keep consistency. */
+}
+
+[dir="ltr"] .phone-menu {
+    transform-origin: bottom right;
+}
+
+[dir="ltr"] .phone-sub {
+    flex-direction: row-reverse;
 }
 
 body::before {
@@ -606,6 +611,11 @@ footer {
     .floating-contact-container {
         bottom: 20px;
         left: 20px;
+    }
+
+    [dir="ltr"] .floating-contact-container {
+        left: auto;
+        right: 20px;
     }
 
     .float-btn {
