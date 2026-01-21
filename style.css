@@ -533,8 +533,6 @@ footer {
     /* Ensure items align to the left (start of LTR) */
     gap: 15px;
     z-index: 10000;
-    direction: ltr;
-    /* Force LTR for consistent left-to-right expansion regardless of page direction */
 }
 
 .float-btn {
