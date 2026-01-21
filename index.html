@@ -34,6 +34,11 @@
 </head>
 
 <body>
+    <!-- Language Toggle -->
+    <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()">
+        <span class="lang-text">English</span>
+        <i class="fa-solid fa-globe"></i>
+    </button>
 
     <div class="container">
         <!-- Header -->
@@ -72,19 +77,19 @@
             <a href="https://www.facebook.com/share/1GVFcAfBqX/?mibextid=wwXIfr" target="_blank"
                 class="link-item social-fb">
                 <i class="fa-brands fa-facebook"></i>
-                فيسبوك - Facebook
+                <span data-i18n="fb-text">فيسبوك - Facebook</span>
             </a>
 
             <a href="https://www.instagram.com/stay_cl0se0?igsh=MXFnOTFwdHdub2d4aw==" target="_blank"
                 class="link-item social-ig">
                 <i class="fa-brands fa-instagram"></i>
-                إنستجرام - Instagram
+                <span data-i18n="ig-text">إنستجرام - Instagram</span>
             </a>
 
             <a href="https://www.tiktok.com/@stay_cl0se0?_r=1&_t=ZS-93F6SBs90QG" target="_blank"
                 class="link-item social-tk">
                 <i class="fa-brands fa-tiktok"></i>
-                تيك توك - TikTok
+                <span data-i18n="tk-text">تيك توك - TikTok</span>
             </a>
         </section>
 
@@ -102,7 +107,7 @@
         <!-- Footer -->
         <footer>
             <a href="https://dev-x-one.vercel.app/" target="_blank" class="powered-by">
-                <p>Powered By</p>
+                <p data-i18n="powered-by">Powered By</p>
                 <img src="devx_logo.jpeg" alt="DEVX Logo" class="powered-logo">
             </a>
         </footer>
@@ -127,13 +132,13 @@
         </div>
 
         <!-- Main Buttons -->
-        <button class="float-btn phone-trigger" onclick="togglePhoneMenu()" title="اتصل بنا">
+        <button class="float-btn phone-trigger" onclick="togglePhoneMenu()" data-i18n-title="call-us">
             <i class="fa-solid fa-phone"></i>
         </button>
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast">✅ تم تحميل جهة الاتصال</div>
+    <div id="toast" data-i18n="toast-success">✅ تم تحميل جهة الاتصال</div>
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>

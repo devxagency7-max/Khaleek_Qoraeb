@@ -81,7 +81,7 @@ if (isIOS) {
 const translations = {
     ar: {
         "logo-text": "خليك قريب",
-        "subtitle": "كل روابط التواصل الرسمية",
+        "subtitle": "🧐 بتدور على سكن في بني سويف؟<br>إحنا هنا علشان نسّهلك كل حاجة!<br>🏠 شقق وبيوت للإيجار للطلبة، قريبة وآمنة<br>💬 تابعنا وشوف الجديد كل يوم",
         "download-title": "تحميل التطبيق",
         "chat-note": "التواصل عبر الدردشة متاح فقط داخل التطبيق",
         "social-title": "روابط التواصل",
@@ -92,11 +92,13 @@ const translations = {
         "save-btn": "حفظ جهة الاتصال على الهاتف",
         "ios-helper": "بعد التحميل، افتح الملف لإضافة جهة الاتصال",
         "toast-success": "✅ تم تحميل جهة الاتصال",
-        "lang-btn": "English"
+        "lang-btn": "English",
+        "powered-by": "Powered By",
+        "call-us": "اتصل بنا"
     },
     en: {
         "logo-text": "Stay Close",
-        "subtitle": "All official contact links",
+        "subtitle": "🧐 Looking for housing in Beni Suef?<br>We're here to make everything easy!<br>🏠 Apartments & houses for students, close & safe<br>💬 Follow us and see what's new every day",
         "download-title": "Download the App",
         "chat-note": "Direct chat is only available inside the app",
         "social-title": "Connect with Us",
@@ -107,7 +109,9 @@ const translations = {
         "save-btn": "Save Contact to Phone",
         "ios-helper": "After downloading, open the file to add the contact",
         "toast-success": "✅ Contact downloaded successfully",
-        "lang-btn": "العربية"
+        "lang-btn": "العربية",
+        "powered-by": "Powered By",
+        "call-us": "Call Us"
     }
 };
 
@@ -115,10 +119,20 @@ let currentLang = localStorage.getItem('siteLang') || 'ar';
 
 function updateUI() {
     const texts = translations[currentLang];
+
+    // Update Text Content
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (texts[key]) {
-            el.textContent = texts[key];
+            el.innerHTML = texts[key];
+        }
+    });
+
+    // Update Titles/Tooltips
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+        const key = el.getAttribute('data-i18n-title');
+        if (texts[key]) {
+            el.title = texts[key];
         }
     });
 

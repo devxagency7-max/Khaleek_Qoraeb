@@ -167,6 +167,9 @@ header {
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: -0.01em;
+    line-height: 1.6;
+    /* Improved spacing for multi-line */
+    max-width: 400px;
 }
 
 /* Glass Card Style */
@@ -482,8 +485,9 @@ footer {
     background: #f8fafc;
     border-radius: 12px;
 }
-.ios-helper.show{
-    display:block;
+
+.ios-helper.show {
+    display: block;
 }
 
 /* Toast Notification */
