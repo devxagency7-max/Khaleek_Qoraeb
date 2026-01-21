@@ -217,6 +217,8 @@ header {
     justify-content: center;
     background: white !important;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    grid-column: span 1;
+    /* Keep in one row (2 columns) */
 }
 
 .store-icon {
