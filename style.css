@@ -100,8 +100,10 @@ body {
     transform-origin: bottom right;
 }
 
-[dir="ltr"] .phone-sub {
-    flex-direction: row-reverse;
+/* Common phone-sub adjustment for both languages to handle expansion correctly */
+.phone-sub {
+    flex-direction: row-reverse !important;
+    justify-content: flex-end !important;
 }
 
 body::before {
@@ -586,14 +588,10 @@ footer {
     font-size: 1.15rem;
     font-weight: 800;
     display: flex;
-    flex-direction: row;
-    /* Icon then Number in LTR */
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     border: 2px solid #0891b2;
-    align-self: flex-start;
+    transition: var(--transition);
 }
 
 .phone-sub i {
