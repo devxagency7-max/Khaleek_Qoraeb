@@ -36,6 +36,16 @@ function saveContact() {
     showToast("✅ تم تحميل جهة الاتصال");
 }
 
+//pre loader start
+function loader() {
+    document.querySelector('.loader-container').classList.add('fade-out');
+}
+function fadeOut() {
+    setInterval(loader, 400);
+}
+window.onload = fadeOut;
+//pre loader end
+
 /**
  * Displays a temporary toast notification
  * @param {string} message 
