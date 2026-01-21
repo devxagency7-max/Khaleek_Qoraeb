@@ -135,11 +135,12 @@ header {
 
 .link-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* Changed to row for better horizontal layout */
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1rem 0.75rem;
+    padding: 1rem 1.5rem;
     background: white;
     border: 1px solid rgba(8, 145, 178, 0.1);
     border-radius: 20px;
@@ -149,8 +150,11 @@ header {
     font-weight: 700;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     position: relative;
-    font-size: 0.9rem;
-    gap: 0.5rem;
+    font-size: 1.1rem;
+    /* Slightly larger text for full-width buttons */
+    gap: 1rem;
+    grid-column: span 2;
+    /* Force one per row in the 2-column grid */
 }
 
 .link-item i {
