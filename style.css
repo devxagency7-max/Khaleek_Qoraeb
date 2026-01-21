@@ -304,7 +304,9 @@ footer {
 .contact-btn:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 15px 30px rgba(8, 145, 178, 0.3);
-    filter: brightness(1.1);
+    background: white;
+    color: var(--accent-color) !important;
+    border: 1px solid var(--accent-color);
 }
 
 .ios-helper {
