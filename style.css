@@ -175,38 +175,60 @@ header {
 }
 
 /* Social Media Specific Styles */
-.social-fb:hover {
+/* Social Media Specific Styles */
+.social-fb {
     background: #1877F2;
     color: white !important;
     border-color: #1877F2;
-    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.3);
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.15);
 }
 
-.social-fb:hover i {
+.social-fb i {
+    color: white !important;
+}
+
+.social-fb:hover {
+    background: #1060c8;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(24, 119, 242, 0.3);
+}
+
+.social-ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white !important;
+    border-color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);;
+    box-shadow:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-ig i {
     color: white !important;
 }
 
 .social-ig:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    color: white !important;
-    border-color: transparent;
-    box-shadow: 0 10px 20px rgba(214, 36, 159, 0.3);
+    filter: brightness(1.1);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(214, 36, 159, 0.3);
 }
 
-.social-ig:hover i {
+.social-tk {
+    background: #000000;
+    color: white !important;
+    border-color: #000000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 5px 0px 0px #EE1D52, -5px 0px 0px #69C9D0;}
+
+.social-tk i {
     color: white !important;
 }
 
 .social-tk:hover {
-    background: #000000;
-    color: white !important;
-    border-color: #000000;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 5px 0px 0px #EE1D52, -5px 0px 0px #69C9D0;
+    background: #111111;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4),
+        3px 0px 0px #EE1D52, -3px 0px 0px #69C9D0;
 }
 
 .social-tk:hover i {
-    color: white !important;
-    text-shadow: 1px 0px #EE1D52, -1px 0px #69C9D0;
+    text-shadow: 1.5px 0px #EE1D52, -1.5px 0px #69C9D0;
 }
 
 .store-link {
@@ -476,21 +498,29 @@ footer {
 
 .phone-sub {
     width: auto;
-    height: 45px;
-    border-radius: 30px;
-    padding: 0 20px;
+    min-width: 220px;
+    height: 55px;
+    border-radius: 35px;
+    padding: 0 25px;
     background: white;
-    color: var(--accent-color);
-    font-size: 14px;
-    font-weight: 700;
+    color: #0f172a;
+    /* Dark text for clarity */
+    font-size: 1.15rem;
+    font-weight: 800;
+    /* Extra bold */
     display: flex;
-    gap: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 2px solid #0891b2;
+    /* Visible border */
     align-self: flex-start;
 }
 
 .phone-sub i {
-    font-size: 16px;
+    font-size: 20px;
+    color: #0891b2;
 }
 
 .float-btn:hover {
