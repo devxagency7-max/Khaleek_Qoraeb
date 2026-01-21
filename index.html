@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خليك قريب - كل روابط التواصل</title>
+
+    <!-- Favicon / Logo in Title -->
+    <link rel="icon" type="image/png" href="logo_icon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="خليك قريب - كل روابط التواصل الرسمية في مكان واحد. امسح الـ QR للتواصل بسرعة.">
+    <meta name="keywords" content="خليك قريب, تواصل اجتماعي, روابط, QR Code, Stay Close">
+    <meta name="author" content="خليك قريب">
+
+    <!-- Open Graph / Social Share -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="خليك قريب - كل روابط التواصل">
+    <meta property="og:description" content="كل روابط التواصل الرسمية في مكان واحد. امسح الـ QR للتواصل بسرعة.">
+    <meta property="og:image" content="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <img src="logo.jpg" alt="خليك قريب" class="logo-img">
+            <h1 class="logo-text">خليك قريب</h1>
+            <p class="subtitle">كل روابط التواصل الرسمية</p>
+        </header>
+
+        <!-- Section: App Download -->
+        <section class="links-section">
+            <h2 class="section-title">تحميل التطبيق</h2>
+
+            <a href="#" target="_blank" class="link-item">
+                <i class="fa-brands fa-google-play"></i>
+                متوفر على Google Play
+            </a>
+
+            <a href="#" target="_blank" class="link-item">
+                <i class="fa-brands fa-apple"></i>
+                متوفر على App Store
+            </a>
+
+            <div class="info-note">
+                <i class="fa-solid fa-circle-info"></i>
+                التواصل عبر الدردشة متاح فقط داخل التطبيق
+            </div>
+        </section>
+
+
+
+        <!-- Section 2: Social Links -->
+        <section class="links-section">
+            <h2 class="section-title">روابط التواصل</h2>
+
+            <a href="https://www.facebook.com/share/1GVFcAfBqX/?mibextid=wwXIfr" target="_blank" class="link-item">
+                <i class="fa-brands fa-facebook"></i>
+                فيسبوك - Facebook
+            </a>
+
+            <a href="https://www.instagram.com/stay_cl0se0?igsh=MXFnOTFwdHdub2d4aw==" target="_blank" class="link-item">
+                <i class="fa-brands fa-instagram"></i>
+                إنستجرام - Instagram
+            </a>
+
+            <a href="https://www.tiktok.com/@stay_cl0se0?_r=1&_t=ZS-93F6SBs90QG" target="_blank" class="link-item">
+                <i class="fa-brands fa-tiktok"></i>
+                تيك توك - TikTok
+            </a>
+        </section>
+
+        <!-- Section 3: Phone Calls -->
+        <section class="links-section">
+            <h2 class="section-title">مكالمات فقط</h2>
+
+            <a href="tel:01211335670" class="link-item phone-item">
+                <i class="fa-solid fa-phone"></i>
+                01211335670
+                <span class="call-only-label">مكالمات فقط</span>
+            </a>
+
+            <a href="tel:01276555844" class="link-item phone-item">
+                <i class="fa-solid fa-phone"></i>
+                01276555844
+                <span class="call-only-label">مكالمات فقط</span>
+            </a>
+
+            <a href="tel:01201560926" class="link-item phone-item">
+                <i class="fa-solid fa-phone"></i>
+                01201560926
+                <span class="call-only-label">مكالمات فقط</span>
+            </a>
+        </section>
+        <!-- Section: Save Contact -->
+        <section class="links-section">
+            <h2 class="section-title">حفظ جهة الاتصال</h2>
+            <button onclick="saveContact()" class="link-item contact-btn"
+                style="grid-column: span 2; width: 100%; border: none; cursor: pointer;">
+                <i class="fa-solid fa-address-book"></i>
+                حفظ جهة الاتصال على الهاتف
+            </button>
+            <p id="ios-helper" class="ios-helper">بعد التحميل، افتح الملف لإضافة جهة الاتصال</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <a href="https://dev-x-one.vercel.app/" target="_blank" class="powered-by">
+                <p>Powered By</p>
+                <img src="devx_logo.jpeg" alt="DEVX Logo" class="powered-logo">
+            </a>
+        </footer>
+    </div>
+
+    <!-- Hidden WhatsApp Float -->
+    <div class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast">✅ تم تحميل جهة الاتصال</div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
