@@ -210,31 +210,34 @@ header {
 }
 
 .store-link {
-    height: 60px;
-    /* Standardize height for store badges */
-    padding: 6px 10px !important;
+    height: 70px;
+    width: 100%;
+    /* Slightly adjusted height */
+    padding: 0 !important;
+    /* Remove padding to let image fill space */
     display: flex;
     align-items: center;
     justify-content: center !important;
-    /* Force center for badges */
-    background: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: transparent !important;
+    /* Let image define background */
+    border: none !important;
+    /* Clean look for full-bleed badges */
     grid-column: span 1;
-    gap: 0 !important;
-    /* No gap needed for single image badges */
+    overflow: hidden;
+    /* Ensure image doesn't bleed out of rounded corners */
+    border-radius: 12px;
 }
 
 .store-icon {
     height: 100%;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
+    /* Fill the entire button area */
     transition: var(--transition);
 }
 
-.store-link:hover {
-    background: #f8fafc !important;
-    border-color: var(--accent-color);
+.store-link:hover .store-icon {
+    transform: scale(1.05);
 }
 
 .link-item:hover .store-icon {
