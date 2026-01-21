@@ -100,11 +100,7 @@ body {
     transform-origin: bottom right;
 }
 
-/* Common phone-sub adjustment for both languages to handle expansion correctly */
-.phone-sub {
-    flex-direction: row-reverse !important;
-    justify-content: flex-end !important;
-}
+
 
 body::before {
     content: '';
@@ -531,8 +527,8 @@ footer {
     right: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* Ensure items align to the left (start of LTR) */
+    align-items: flex-end;
+    /* Ensure items align to the left (End of RTL axis) to match user preference for Bottom Left */
     gap: 15px;
     z-index: 10000;
 }
@@ -619,4 +615,16 @@ footer {
         height: 50px;
         font-size: 20px;
     }
+}
+
+/* ✅ Arabic (RTL): icon left + number right */
+.phone-sub {
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
+}
+
+/* ✅ English (LTR): icon right + number left */
+[dir="ltr"] .phone-sub {
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
 }

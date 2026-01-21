@@ -28,6 +28,8 @@ function saveContact() {
     document.body.appendChild(link);
     link.click();
 
+    setTimeout(() => window.URL.revokeObjectURL(url), 1000);
+
     // Cleanup
     document.body.removeChild(link);
     window.URL.revokeObjectURL(url);
@@ -68,14 +70,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Detect iOS for vCard instructions
-const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-if (isIOS) {
-    const helper = document.getElementById('ios-helper');
-    if (helper) {
-        helper.style.display = 'block';
-    }
-}
+
 
 // --- Multi-Language Support ---
 const translations = {
@@ -150,6 +145,12 @@ function toggleLanguage() {
     localStorage.setItem('siteLang', currentLang);
     updateUI();
 }
+// Close phone menu on language change (avoid weird positioning)
+const menu = document.getElementById('phoneMenu');
+if (menu) menu.classList.remove('show');
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+const helper = document.getElementById('ios-helper');
+if (helper) helper.classList.toggle('show', isIOS);
 
 // Initialize on load
 document.addEventListener('DOMContentLoaded', updateUI);
