@@ -84,28 +84,6 @@
             </a>
         </section>
 
-        <!-- Section 3: Phone Calls -->
-        <section class="links-section">
-            <h2 class="section-title">مكالمات فقط</h2>
-
-            <a href="tel:01211335670" class="link-item phone-item">
-                <i class="fa-solid fa-phone"></i>
-                01211335670
-                <span class="call-only-label">مكالمات فقط</span>
-            </a>
-
-            <a href="tel:01276555844" class="link-item phone-item">
-                <i class="fa-solid fa-phone"></i>
-                01276555844
-                <span class="call-only-label">مكالمات فقط</span>
-            </a>
-
-            <a href="tel:01201560926" class="link-item phone-item">
-                <i class="fa-solid fa-phone"></i>
-                01201560926
-                <span class="call-only-label">مكالمات فقط</span>
-            </a>
-        </section>
         <!-- Section: Save Contact -->
         <section class="links-section">
             <h2 class="section-title">حفظ جهة الاتصال</h2>
@@ -126,9 +104,35 @@
         </footer>
     </div>
 
-    <!-- Hidden WhatsApp Float -->
-    <div class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i>
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact-container">
+        <!-- Phone Sub-menu (Hidden by default) -->
+        <div class="phone-menu" id="phoneMenu">
+            <a href="tel:01211335670" class="float-btn phone-sub">
+                <i class="fa-solid fa-phone"></i>
+                <span>01211335670</span>
+            </a>
+            <a href="tel:01276555844" class="float-btn phone-sub">
+                <i class="fa-solid fa-phone"></i>
+                <span>01276555844</span>
+            </a>
+            <a href="tel:01116668310" class="float-btn phone-sub">
+                <i class="fa-solid fa-phone"></i>
+                <span>01116668310</span>
+            </a>
+            <a href="tel:01201560926" class="float-btn phone-sub">
+                <i class="fa-solid fa-phone"></i>
+                <span>01201560926</span>
+            </a>
+        </div>
+
+        <!-- Main Buttons -->
+        <button class="float-btn phone-trigger" onclick="togglePhoneMenu()" title="اتصل بنا">
+            <i class="fa-solid fa-phone"></i>
+        </button>
+        <a href="https://wa.me/201021422744" target="_blank" class="float-btn whatsapp-btn" title="تواصل عبر واتساب">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
     </div>
 
     <!-- Toast Notification -->
